@@ -1,0 +1,84 @@
+{
+  "books": [
+    {
+      "id": 0,
+      "title": "dsadasdas",
+      "author": "dasdasda",
+      "ISBN": "sdasdasdasdasd"
+    },
+    {
+      "id": 1,
+      "title": "Title",
+      "author": "Author",
+      "category": "Category",
+      "ISBN": "ISBN"
+    },
+    {
+      "id": 2,
+      "title": "Title",
+      "author": "Author",
+      "category": "Category",
+      "ISBN": "ISBN"
+    },
+    {
+      "id": 0,
+      "title": "dsadasdas",
+      "author": "dasdasda",
+      "ISBN": "sdasdasdasdasd"
+    },
+    {
+      "id": 1,
+      "title": "Title",
+      "author": "Author",
+      "category": "Category",
+      "ISBN": "ISBN"
+    },
+    {
+      "id": 2,
+      "title": "Title",
+      "author": "Author",
+      "category": "Category",
+      "ISBN": "ISBN"
+    },
+    {
+      "id": 0,
+      "title": "dsadasdas",
+      "author": "dasdasda",
+      "ISBN": "sdasdasdasdasd"
+    },
+    {
+      "id": 1,
+      "title": "Title",
+      "author": "Author",
+      "category": "Category",
+      "ISBN": "ISBN"
+    },
+    {
+      "id": 2,
+      "title": "Title",
+      "author": "Author",
+      "category": "Category",
+      "ISBN": "ISBN"
+    },
+    {
+      "id": 0,
+      "title": "dsadasdas",
+      "author": "dasdasda",
+      "ISBN": "sdasdasdasdasd"
+    },
+    {
+      "id": 1,
+      "title": "Title",
+      "author": "Author",
+      "category": "Category",
+      "ISBN": "ISBN"
+    },
+    {
+      "id": 2,
+      "title": "Title",
+      "author": "Author",
+      "category": "Category",
+      "ISBN": "ISBN"
+    }
+  ]
+}
