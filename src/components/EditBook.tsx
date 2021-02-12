@@ -90,6 +90,10 @@ const EditBook = ({
             setTimeout(() => {
                 setSuccess(false);
             }, 3000); // Disapeare the success message
+
+            setTitleError(false);
+            setAuthorError(false);
+            setISBNError(false); // After all we set all values to default
         }
 
         event.preventDefault(); // Don`t reload a page

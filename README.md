@@ -88,6 +88,7 @@ yarn pretty
 9. Prettier
 10. FontAwesome
 11. Axios
+12. Json-server
 
 
 ## Usage
