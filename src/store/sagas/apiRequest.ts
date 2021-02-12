@@ -10,9 +10,9 @@ export function apiRequestDelete(url: string, id: number) {
 }
 
 export function apiRequestAdd(url: string, data: BookType) {
-    return axios.post(url, data);
+    return axios.post(url, data); // The API request for add special book
 }
 
 export function apiRequestChange(url: string, data: BookType) {
-    return axios.put(url, data);
+    return axios.put(url, data); // The API request for edit special book
 }

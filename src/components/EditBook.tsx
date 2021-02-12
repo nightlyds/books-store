@@ -20,7 +20,7 @@ interface EditBookProps extends RouteComponentProps<RouteIDType> {
     error: boolean;
     editBook: (data: BookType, id: number) => void;
     loadUpBook: (id: number) => void;
-} // Types for props
+} // Types for props, also here is using Router props for match param
 
 const EditBook = ({
     match,
@@ -40,13 +40,21 @@ const EditBook = ({
     const [ISBNError, setISBNError] = useState<boolean>(false);
 
     useEffect(() => {
-        loadUpBook(Number(match.params.id));
+        loadUpBook(Number(match.params.id)); // We load book with special id, which we take from url | Router (match.params.id)
     }, [loadUpBook, match.params.id]);
 
+    // The validation principle is based on checking a length of the text and that
+    // have to be bigger 3 and not be the same like previous value
+    // If you have a question about: "Why can I change only a full book?"
+    // and "Why can`t I change only a one param of the book?"
+    // I can explain that, it is created in this way for simpler function working
+    // The main duty of this work is showing the basic principle of the PUT method working
+    // And it can be modified without any problems
+    // P. S. If you are reading this, have a good day ;)
     function validateForm(event: React.FormEvent) {
         const {
             data: { id },
-        } = book;
+        } = book; // Destructing
 
         if (title.length <= 3 || title === book.data.title) {
             setTitleError(true);
@@ -73,18 +81,18 @@ const EditBook = ({
                     ISBN,
                 },
                 id
-            );
+            ); // Send data
 
-            setPostData(true);
+            setPostData(true); // The form is confirmed
 
-            setSuccess(true);
+            setSuccess(true); // Show the success message
 
             setTimeout(() => {
                 setSuccess(false);
-            }, 3000);
+            }, 3000); // Disapeare the success message
         }
 
-        event.preventDefault();
+        event.preventDefault(); // Don`t reload a page
     }
     return (
         <div className="edit-book-container">

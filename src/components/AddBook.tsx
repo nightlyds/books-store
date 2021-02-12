@@ -19,7 +19,7 @@ export type AddBookProps = {
 
 function getRandomInt(max: number) {
     return Math.floor(Math.random() * Math.floor(max));
-}
+} // A simple function for random number
 
 const AddBook = ({ loading, error, addBook, loadUp, books }: AddBookProps) => {
     const [postData, setPostData] = useState<boolean>(false);
@@ -35,6 +35,8 @@ const AddBook = ({ loading, error, addBook, loadUp, books }: AddBookProps) => {
         loadUp();
     }, [loadUp]);
 
+    // The validation principle is based on checking a length of the text and that
+    // have to be bigger 3
     function validateForm(event: React.FormEvent) {
         let id: number = 0;
 
@@ -53,9 +55,9 @@ const AddBook = ({ loading, error, addBook, loadUp, books }: AddBookProps) => {
                     if (id <= book.id) {
                         id = book.id;
                     }
-                });
+                }); // We are looking for the last id
             } else {
-                id = getRandomInt(99999);
+                id = getRandomInt(99999); // However in some extreme situation we can create our unique id
             }
 
             addBook({
@@ -63,27 +65,27 @@ const AddBook = ({ loading, error, addBook, loadUp, books }: AddBookProps) => {
                 title,
                 author,
                 ISBN,
-            });
+            }); // After all we just send data and add our book
 
-            setPostData(true);
+            setPostData(true); // That is using for success compited form checking
 
-            setSuccess(true);
+            setSuccess(true); // Show the success message
 
             setTimeout(() => {
                 setSuccess(false);
-            }, 3000);
+            }, 3000); // After 3 seconds it will disapear
 
             setTitle("");
             setAuthor("");
             setISBN("");
             setTitleError(false);
             setAuthorError(false);
-            setISBNError(false);
+            setISBNError(false); // After all we set all values to default
 
-            loadUp();
+            loadUp(); // LoadUp books with our already added book, this needs for checking the newest last id
         }
 
-        event.preventDefault();
+        event.preventDefault(); // Don`t reload page after a submiting of the form
     }
     return (
         <div className="add-book-container">
